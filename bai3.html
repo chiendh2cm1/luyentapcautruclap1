@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<!--<p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>-->
+<script>
+    let n = parseInt(prompt("nhập số"))
+    let num1 = 0;
+    let num2 =1;
+    let temp;
+    let cout = 0;
+    while (n > 0) {
+        cout = cout + num1 + ", ";
+        temp = num1+num2;
+        num1 = num2;
+        num2 = temp;
+        n--;
+    }
+    document.write( "dãy số: " +cout)
+</script>
+</body>
+</html>

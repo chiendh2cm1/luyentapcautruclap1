@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<input type="button" onclick="play()">
+<br>
+<h1 id="result"></h1>
+<script>
+    let res = document.getElementById("result");
+    function play() {
+        let count;
+        let min = parseInt(prompt("Min"));
+        let max = parseInt(prompt("Max"));
+        let random = Math.floor(Math.random() * (max - min + 1) + min);
+        for (count = 0; count < 3; count++) {
+            let ans = parseInt(prompt("Let's guess :", ""));
+            if (random === ans) {
+                res.innerHTML = 'Congratulation !';
+                break;
+            } else if (ans > random) {
+                alert(' Guess Number > Secret Number')
+            } else {
+                alert(' Guess Number < Secret Number')
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
